@@ -1,0 +1,1 @@
+Acutal domain of personal website: https://minseung.netlify.app/
