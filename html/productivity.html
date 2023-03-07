@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Minseung Jeon</title>
-    </head>
-    <body>
+  <head>
+    <title>Minseung Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-        <h1>Welcome to my first personal website!</h1>
-        <p>This is a paragraph.</p>
-        <input type = "time"/>
-        <input type = "time"/>
+  <body>
+    <h1>Let's see how productive you were today!</h1>
+    <script src="main.js"></script>
 
-        <button>submit</button>
+    <p>Write down all the activities you did today!</p>
 
-    </body>
+    <div id="dynamic">
+      how many time inputs? <input type="number" id = "dynamicNumber">
+      <button onclick="addInputBoxes()">Add Input Boxes</button>
+    </div>
+
+    <div id="container">
+
+    <div id="time">
+      Time1: <input type="time" id="time1" /> 
+      Time2: <input type="time" id="time2" />
+      <input type="text" id="tag1" />
+    </div>
+
+    <div id = "resultButton">
+      <button onclick="diff()">subtracted time</button>
+    </div>
+
+    <p id="output">Result:</p>
+  </body>
 </html>
