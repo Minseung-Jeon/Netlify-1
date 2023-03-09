@@ -2,7 +2,7 @@
 
 //later on: group the same tag and result prints it as groups
 
-let result = "";
+let outputOfTime = "";
 
 function repeat(numberOfTimeInput) {
   calculate(numberOfTimeInput - 1, numberOfTimeInput, numberOfTimeInput / 2);
@@ -30,7 +30,7 @@ function calculate(x, y, tagNum) {
   difference = difference - hours * 1000 * 60 * 60;
   let minutes = Math.floor(difference / 1000 / 60);
 
-  result =
+  outputOfTime =
     " <br> tag: " +
     tag +
     " subtracted time: " +
@@ -39,13 +39,13 @@ function calculate(x, y, tagNum) {
     ":" +
     (minutes < 9 ? "0" : "") +
     minutes +
-    result;
+    outputOfTime;
 
   output(outputOfTime);
 }
 
 function output(outputOfTime) {
-  document.getElementById("ButtonOutput").innerHTML = result;
+  document.getElementById("ButtonOutput").innerHTML = outputOfTime;
 }
 
 
