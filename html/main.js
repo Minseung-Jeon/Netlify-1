@@ -33,7 +33,7 @@ function calculate(x, y, tagNum) {
   outputOfTime =
     " <br> Time you Spent on this tag " +
     tag +
-    "=" +
+    " = " +
     (hours < 9 ? "0" : "") +
     hours +
     ":" +
