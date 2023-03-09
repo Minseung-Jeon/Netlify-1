@@ -31,7 +31,9 @@ function calculate(x, y, tagNum) {
   let minutes = Math.floor(difference / 1000 / 60);
 
   outputOfTime =
-    " <br> Time you Spent on this tag " +tag + ":"
+    " <br> Time you Spent on this tag " +
+    tag +
+    ":" +
     (hours < 9 ? "0" : "") +
     hours +
     ":" +
@@ -45,22 +47,6 @@ function calculate(x, y, tagNum) {
 function output(outputOfTime) {
   document.getElementById("ButtonOutput").innerHTML = outputOfTime;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //--------------------------------------------------------
 //dynamic input box based on user's input
