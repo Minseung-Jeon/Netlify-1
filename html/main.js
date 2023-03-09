@@ -31,9 +31,7 @@ function calculate(x, y, tagNum) {
   let minutes = Math.floor(difference / 1000 / 60);
 
   outputOfTime =
-    " <br> tag: " +
-    tag +
-    " subtracted time: " +
+    " <br> Time you Spent on this tag: " +tag +
     (hours < 9 ? "0" : "") +
     hours +
     ":" +
