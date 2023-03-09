@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Minseung Jeon</title>
+    <title>Productivity Tools</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -11,23 +11,50 @@
 
     <p>Write down all the activities you did today!</p>
 
+    <!--
+    //dynamic input box based on user's input
     <div id="dynamic">
       how many time inputs? <input type="number" id = "dynamicNumber">
       <button onclick="addInputBoxes()">Add Input Boxes</button>
     </div>
 
     <div id="container">
+    -->
 
-    <div id="time">
+    <div id="subtract1">
       Time1: <input type="time" id="time1" /> 
       Time2: <input type="time" id="time2" />
       <input type="text" id="tag1" />
     </div>
 
-    <div id = "resultButton">
-      <button onclick="diff()">subtracted time</button>
+    <div id="subtract2">
+      Time3: <input type="time" id="time3" /> 
+      Time4: <input type="time" id="time4" />
+      <input type="text" id="tag2" />
     </div>
 
-    <p id="output">Result:</p>
+    <div id="subtract3">
+      Time5: <input type="time" id="time5" /> 
+      Time6: <input type="time" id="time6" />
+      <input type="text" id="tag3" />
+    </div>
+
+    <div id="subtract4">
+      Time7: <input type="time" id="time7" /> 
+      Time8: <input type="time" id="time8" />
+      <input type="text" id="tag4" />
+    </div>
+
+    <div id="subtract5">
+      Time9: <input type="time" id="time9" /> 
+      Time10: <input type="time" id="time10" />
+      <input type="text" id="tag5" />
+    </div>
+
+    <div id="resultButton">
+      <button onclick="repeat(10)">Calculate!</button>
+    </div>
+
+    <p id="ButtonOutput">Result:</p>
   </body>
 </html>
