@@ -2,11 +2,37 @@
 
 //later on: group the same tag and result prints it as groups
 
+//sets the cName=cValue cookie value
+//button setTags
+function setCookie(cName, cValue){
+  document.cookie = cName + "=" + cValue + "; "; 
+}
+
+
+//calls function setCookie tagNum times to set cookie for all inputTags
+//button: setTags
+function setTags(tagNum){
+  setCookie("cookie"+tagNum, document.getElementById("inputTag"+tagNum).value);
+  const newCount = tagNum - 1;
+
+  if (newCount > 0) {
+    setTags(newCount);
+  }
+}
+
+function dynamicSelect(tagNum){
+
+}
+
+
+
+
 let outputOfTime = "";
 
+// to iterate function calculate numberOfTimeInput times
+//button: Calculate!
 function repeat(numberOfTimeInput) {
   calculate(numberOfTimeInput - 1, numberOfTimeInput, numberOfTimeInput / 2);
-
   const newCount = numberOfTimeInput - 2;
 
   if (newCount > 0) {
@@ -14,6 +40,8 @@ function repeat(numberOfTimeInput) {
   }
 }
 
+//calclates the subtracted time and pass the output to function output
+//button: Calculate!
 function calculate(x, y, tagNum) {
   earlierTime = document.getElementById("time" + x).value;
   laterTime = document.getElementById("time" + y).value;
@@ -41,12 +69,18 @@ function calculate(x, y, tagNum) {
     minutes +
     outputOfTime;
 
+
+
+
   output(outputOfTime);
 }
 
+//outputs the subtracted time and tag string
+//button: Calculate!
 function output(outputOfTime) {
   document.getElementById("ButtonOutput").innerHTML = outputOfTime;
 }
+
 
 //--------------------------------------------------------
 //dynamic input box based on user's input
