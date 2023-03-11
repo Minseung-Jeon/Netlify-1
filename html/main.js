@@ -8,7 +8,6 @@ function setCookie(cName, cValue){
   document.cookie = cName + "=" + cValue + "; "; 
 }
 
-
 //calls function setCookie tagNum times to set cookie for all inputTags
 //button: setTags
 function setTags(tagNum){
@@ -20,7 +19,32 @@ function setTags(tagNum){
   }
 }
 
+//returns cookie's value array
+function getCookieValueArray(tagNum){
+  let cookieArray = document.cookie.split(';');
+  let cookieValueArray = [];
+  for (let i = tagNum-1; i >= 0; i--){
+    let cookieNameAndValueSplit = cookieArray[i].split('=');
+    let cName = cookieNameAndValueSplit[1];
+    cookieValueArray.push(cName);
+  }
+  return cookieValueArray;
+}
+
+
+//creates new tag options
 function dynamicSelect(tagNum){
+  let cookieValueArray=getCookieValueArray(tagNum);
+
+  for (let x = 1; x <=tagNum; x++){
+    let select = document.getElementById('tag'+x);  
+    for (let y = 0; y < tagNum; y++){
+      let newOption = document.createElement('option');
+      newOption.value= cookieValueArray[y];
+      newOption.innerHTML=cookieValueArray[y];
+      select.appendChild(newOption);
+    }
+  }
 
 }
 
